@@ -15,23 +15,11 @@ public class Hotel {
         return rating;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
     public int[] getRegularPriceList() {
         return regularPriceList;
     }
 
-    public void setRegularPriceList(int[] regularPriceList) {
-        this.regularPriceList = regularPriceList;
-    }
-
     public int[] getRewardsPriceList() {
         return rewardsPriceList;
-    }
-
-    public void setRewardsPriceList(int[] rewardsPriceList) {
-        this.rewardsPriceList = rewardsPriceList;
     }
 }

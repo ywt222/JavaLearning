@@ -1,7 +1,7 @@
 package main;
 
 public class PriceCalculator {
-    public static int[] getHotelPrice(String consumerType, int[] reservationDays, Hotel[] hotelList) {
+    public static int[] getHotelPrice(String customerType, int[] reservationDays, Hotel[] hotelList) {
         Hotel lakewood = hotelList[0];
         Hotel bridgewood = hotelList[1];
         Hotel ridgewood = hotelList[2];
@@ -10,11 +10,11 @@ public class PriceCalculator {
         int[] bridgewoodPriceList = {};
         int[] ridgewoodPriceList = {};
 
-        if (consumerType.equals("Regular")) {
+        if (customerType.equals("Regular")) {
             lakewoodPriceList = lakewood.getRegularPriceList();
             bridgewoodPriceList = bridgewood.getRegularPriceList();
             ridgewoodPriceList = ridgewood.getRegularPriceList();
-        } else if (consumerType.equals("Rewards")) {
+        } else if (customerType.equals("Rewards")) {
             lakewoodPriceList = lakewood.getRewardsPriceList();
             bridgewoodPriceList = bridgewood.getRewardsPriceList();
             ridgewoodPriceList = ridgewood.getRewardsPriceList();
