@@ -1,6 +1,6 @@
 package test;
 
-import main.Hotel;
+import main.model.Hotel;
 import main.HotelDetail;
 import org.junit.Test;
 
@@ -10,9 +10,9 @@ public class HotelDetailTest {
     @Test
     public void shouldReturnHotelDetails() throws Exception {
         Hotel[] hotelList = HotelDetail.getHotelDetail();
-        Hotel lakewood=hotelList[0];
-        Hotel bridgewood=hotelList[1];
-        Hotel ridgewood=hotelList[2];
+        Hotel lakewood = hotelList[0];
+        Hotel bridgewood = hotelList[1];
+        Hotel ridgewood = hotelList[2];
 
         assertEquals(3, lakewood.getRating());
         assertEquals(4, bridgewood.getRating());

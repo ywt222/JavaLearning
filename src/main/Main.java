@@ -1,5 +1,8 @@
 package main;
 
+import main.model.CustomerType;
+import main.model.Hotel;
+
 import java.io.File;
 import java.util.Scanner;
 
@@ -9,7 +12,7 @@ public class Main {
         Scanner sc = new Scanner(file);
         String inputInfo = sc.nextLine();
 
-        String customerType = CustomerType.getCustomerType(inputInfo);
+        CustomerType customerType = CustomerTypeGetter.getCustomerType(inputInfo);
         int[] reservationDays = ReservationDays.getReservationDate(inputInfo);
         Hotel[] hotelList = HotelDetail.getHotelDetail();
         int[] priceList = PriceCalculator.getHotelPrice(customerType, reservationDays, hotelList);

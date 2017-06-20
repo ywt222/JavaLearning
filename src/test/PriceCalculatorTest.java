@@ -1,8 +1,9 @@
 package test;
 
-import main.Hotel;
+import main.model.Hotel;
 import main.HotelDetail;
 import main.PriceCalculator;
+import main.model.CustomerType;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,7 +14,7 @@ public class PriceCalculatorTest {
 
     @Test
     public void shouldReturnPriceListForRegularCustomer() throws Exception {
-        String customerType = "Regular";
+        CustomerType customerType = CustomerType.Regular;
         int[] priceList = PriceCalculator.getHotelPrice(customerType, reservationDays, hotelList);
         assertEquals(310, priceList[0]);
         assertEquals(380, priceList[1]);
@@ -22,7 +23,7 @@ public class PriceCalculatorTest {
 
     @Test
     public void shouldReturnPriceListForRewardsCustomer() throws Exception {
-        String customerType = "Rewards";
+        CustomerType customerType = CustomerType.Rewards;
         int[] priceList = PriceCalculator.getHotelPrice(customerType, reservationDays, hotelList);
         assertEquals(240, priceList[0]);
         assertEquals(270, priceList[1]);

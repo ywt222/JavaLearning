@@ -10,7 +10,7 @@ public class ReservationDaysTest {
 
     @Test
     public void shouldClassifyReservationDate() throws Exception {
-        assertEquals(2,ReservationDays.getReservationDate(inputInfo)[0]);
-        assertEquals(1,ReservationDays.getReservationDate(inputInfo)[1]);
+        assertEquals(2, ReservationDays.getReservationDate(inputInfo)[0]);
+        assertEquals(1, ReservationDays.getReservationDate(inputInfo)[1]);
     }
 }

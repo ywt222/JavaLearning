@@ -1,5 +1,7 @@
 package main;
 
+import main.model.Hotel;
+
 public class HotelDetail {
     public static Hotel[] getHotelDetail() {
         int lakewoodRating = 3;
