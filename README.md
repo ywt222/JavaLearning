@@ -4,7 +4,7 @@
 
 ### hotel details
 
-|      name     |  rating  |  weekday-regular  |  weekday-rewards  |  weekday-regular  |  weekday-rewards  |
+|      name     |  rating  |  weekday-regular  |  weekday-rewards  |  weekend-regular  |  weekend-rewards  |
 |:-------------:|:--------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 |   Lakewood    |     3    |        110        |         80        |         90        |         80        |
 |   Bridgewood  |     4    |        160        |        110        |         60        |         50        |
