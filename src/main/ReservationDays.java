@@ -4,7 +4,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ReservationDays {
-    public static int[] getReservationDate(String inputInfo) {
+    private String inputInfo;
+
+    public ReservationDays(String inputInfo) {
+        this.inputInfo = inputInfo;
+    }
+
+    public int[] getReservationDate() {
         int start = inputInfo.indexOf(":");
         String dates = inputInfo.substring(start + 1);
 
@@ -12,12 +18,12 @@ public class ReservationDays {
         return classifyWeekdate(dateArray);
     }
 
-    private static List<String> getDateArray(String dates) {
+    private List<String> getDateArray(String dates) {
         String[] datesString = dates.split(",");
         return Arrays.asList(datesString);
     }
 
-    private static int[] classifyWeekdate(List<String> dateArray) {
+    private int[] classifyWeekdate(List<String> dateArray) {
         int weekday = 0;
         int weekend = 0;
 

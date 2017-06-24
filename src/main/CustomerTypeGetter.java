@@ -3,7 +3,13 @@ package main;
 import main.model.CustomerType;
 
 public class CustomerTypeGetter {
-    public static CustomerType getCustomerType(String inputInfo) {
+    private String inputInfo;
+
+    public CustomerTypeGetter(String inputInfo) {
+        this.inputInfo = inputInfo;
+    }
+
+    public CustomerType getCustomerType() {
         int start = inputInfo.indexOf(":");
         try {
             return CustomerType.valueOf(inputInfo.substring(0, start));

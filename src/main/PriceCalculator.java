@@ -4,7 +4,17 @@ import main.model.CustomerType;
 import main.model.Hotel;
 
 public class PriceCalculator {
-    public static int[] getHotelPrice(CustomerType customerType, int[] reservationDays, Hotel[] hotelList) {
+    private CustomerType customerType;
+    private int[] reservationDaysCount;
+    private Hotel[] hotelList;
+
+    public PriceCalculator(CustomerType customerType, int[] reservationDaysCount, Hotel[] hotelList) {
+        this.customerType = customerType;
+        this.reservationDaysCount = reservationDaysCount;
+        this.hotelList = hotelList;
+    }
+
+    public int[] getHotelPrice() {
         Hotel lakewood = hotelList[0];
         Hotel bridgewood = hotelList[1];
         Hotel ridgewood = hotelList[2];
@@ -30,8 +40,8 @@ public class PriceCalculator {
         int ridgewoodWeekdayPrice = ridgewoodPriceList[0];
         int ridgewoodWeekendPrice = ridgewoodPriceList[1];
 
-        int weekdayCount = reservationDays[0];
-        int weekendCount = reservationDays[1];
+        int weekdayCount = reservationDaysCount[0];
+        int weekendCount = reservationDaysCount[1];
 
         int lakewoodPrice = calculateHotelPrice(lakewoodWeekdayPrice, lakewoodWeekendPrice, weekdayCount, weekendCount);
         int bridgewoodPrice = calculateHotelPrice(bridgewoodWeekdayPrice, bridgewoodWeekendPrice, weekdayCount, weekendCount);
@@ -41,7 +51,7 @@ public class PriceCalculator {
         return priceList;
     }
 
-    private static int calculateHotelPrice(int weekdayPrice, int weekendPrice, int weekdayCount, int weekendCount) {
+    private int calculateHotelPrice(int weekdayPrice, int weekendPrice, int weekdayCount, int weekendCount) {
         return weekdayPrice * weekdayCount + weekendPrice * weekendCount;
     }
 }

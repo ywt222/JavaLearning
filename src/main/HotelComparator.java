@@ -1,7 +1,15 @@
 package main;
 
 public class HotelComparator {
-    public static String compareHotel(int[] priceList, int[] ratingList) {
+    private int[] priceList;
+    private int[] ratingList;
+
+    public HotelComparator(int[] priceList, int[] ratingList) {
+        this.priceList = priceList;
+        this.ratingList = ratingList;
+    }
+
+    public String compareHotel() {
         int lakewoodPrice = priceList[0];
         int bridgewoodPrice = priceList[1];
         int ridgewoodPrice = priceList[2];

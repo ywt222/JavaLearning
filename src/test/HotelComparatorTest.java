@@ -10,13 +10,15 @@ public class HotelComparatorTest {
     public void shouldReturnCheapestHotel() throws Exception {
         int[] priceList = {100, 110, 120};
         int[] ratingList = {3, 4, 5};
-        assertEquals("Lakewood", HotelComparator.compareHotel(priceList, ratingList));
+        HotelComparator hotelComparator = new HotelComparator(priceList, ratingList);
+        assertEquals("Lakewood", hotelComparator.compareHotel());
     }
 
     @Test
     public void shouldReturnHighestRatingHotelWhenPriceSame() throws Exception {
         int[] priceList = {100, 100, 120};
         int[] ratingList = {3, 4, 5};
-        assertEquals("Bridgewood", HotelComparator.compareHotel(priceList, ratingList));
+        HotelComparator hotelComparator = new HotelComparator(priceList, ratingList);
+        assertEquals("Bridgewood", hotelComparator.compareHotel());
     }
 }
